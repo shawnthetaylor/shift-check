@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.checklist {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.list {
+  border: 2px solid #222;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.todo {
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 -1px 0 0 #222 inset;
+  display: flex;
+}
+
+.todo:last-child {
+  box-shadow: none;
+}
+
+label {
+  padding: 15px;
+  width: 100%;
+}
+
+input[type='checkbox'] {
+  margin-right: 20px;
+}
+
+input[checked] ~ label {
+  text-decoration: line-through;
+}
+
+label ~ input {
+  border: 15px solid black;
+}
